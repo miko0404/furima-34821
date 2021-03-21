@@ -14,7 +14,10 @@
 | birthday           | date   | null: false               |
 ### Association
 has_many :items
-has_one :address
+has_many :orders
+has_many :comments
+
+
 
 
 
@@ -35,6 +38,7 @@ has_one :address
 
 has_one :order
 belongs_to :user
+has_many :comments
 
 
 ## addresses テーブル
