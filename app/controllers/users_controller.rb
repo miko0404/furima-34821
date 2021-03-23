@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
-  def edit
-  end
+  #def edit
+  #end
 
 
-  private
+  #private
 
-  def user_params
-    params.require(:user).permit(:sign_up, keys: [:nickname, :birthday, :first_name, :last_name, :first_name_kana, :last_name_kana])
-  end
-end
+  #def user_params
+    #params.require(:user).permit(:sign_up, keys: [:nickname, :birthday, :first_name, :last_name, :first_name_kana, :last_name_kana])
+  #end
+#end
  
 end
