@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_many :items
       
   with_options presence: true do
     validates :password, format: { with: /\A[a-z0-9]{6,}+\z/i, message: 'is invalid. Input half-width characters.' }
