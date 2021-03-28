@@ -7,7 +7,7 @@
       <%= @item.item_name %>
     </h2>
     <div class="item-img-content">
-      <%= image_tag @item.image, class:"item-box-img" %>
+      <%#= image_tag @item.image, class:"item-box-img" %>
       <%# 商品が売れている場合は、sold outを表示しましょう %>
       <%# if @item.order.present? %>
       <div class="sold-out">
@@ -21,7 +21,7 @@
         ¥ 999,999,999
       </span>
       <span class="item-postage">
-        <%= @item.postage_payer %>
+        <%#= @item.postage_payer %>
       </span>
     </div>
 
@@ -39,33 +39,33 @@
     <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
 
     <div class="item-explain-box">
-      <span><%= @item.item_explanation %></span>
+      <span><%#= @item.item_explanation %></span>
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">出品者</th>
-          <td class="detail-value"><%= @item.user.nickname %></td>
+          <%#<td class="detail-value"><%= @item.user.nickname %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
-          <td class="detail-value"><%= @item.category.name %></td>
+          <%#<td class="detail-value"><%= @item.category.name %></td>
         </tr>
         <tr>
           <th class="detail-item">商品の状態</th>
-          <td class="detail-value"><%= @item.item_status %></td>
+          <%#<td class="detail-value"><%= @item.item_status %></td>
         </tr>
         <tr>
           <th class="detail-item">配送料の負担</th>
-          <td class="detail-value"><%= @item.postage_payer %></td>
+          <%#<td class="detail-value"><%= @item.postage_payer %></td>
         </tr>
         <tr>
           <th class="detail-item">発送元の地域</th>
-          <td class="detail-value"><%= @item.address %></td>
+          <%#<td class="detail-value"><%= @item.address %></td>
         </tr>
         <tr>
           <th class="detail-item">発送日の目安</th>
-          <td class="detail-value"><%= @item.days_shipping %></td>
+          <%#<td class="detail-value"><%= @item.days_shipping %></td>
         </tr>
       </tbody>
     </table>
