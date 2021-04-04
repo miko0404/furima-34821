@@ -6,7 +6,6 @@ class Item < ApplicationRecord
   belongs_to :address
   belongs_to :item_status
   belongs_to :user
-  #belongs_to :address_id
   has_one_attached :image
   has_one :user_buy_address
 

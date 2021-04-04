@@ -10,11 +10,11 @@ class Order
       validates :post_code, format: { with: /\A\d{3}[-]\d{4}\z/}
       validates :city
       validates :city_number
-      validates :phone_number, format: {with: /\A[0-9]{3}[0-9]{4}[0-9]{4}\z/, message: "Input only number"}
+      validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "Input only number"}
     end
   
     def save
       user_buy_address = UserBuyAddress.create(user_id: user_id, item_id: item_id)
-      BuyAddress.create(post_code: post_code, address_id: address_id, city: city, city_number: city_number, building_name: building_name, phone_number: phone_number, user_buy_address: user_buy_address)
+      BuyAddress.create(post_code: post_code, address_id: address_id, city: city, city_number: city_number, building_name: building_name, phone_number: phone_number, user_buy_address_id: user_buy_address.id)
     end
   end 

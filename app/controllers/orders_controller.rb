@@ -11,9 +11,9 @@ class OrdersController < ApplicationController
       redirect_to root_path
     end
 
-    #if @item.user_buy_address.present?
-      #redirect_to root_path
-    #end
+    if @item.user_buy_address.present?
+      redirect_to root_path
+    end
   end
 
    def create
