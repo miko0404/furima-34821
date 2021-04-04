@@ -8,6 +8,6 @@ window.addEventListener('load', () => {
     
      const profit = document.getElementById("profit");
      profit.innerHTML = Math.floor(priceInput.value * 0.9);    
-})
+ })
 });
   

@@ -5,9 +5,9 @@ class Item < ApplicationRecord
   belongs_to :days_shipping
   belongs_to :address
   belongs_to :item_status
-
   belongs_to :user
   has_one_attached :image
+  has_one :user_buy_address
 
   with_options presence: true do
     validates :image
