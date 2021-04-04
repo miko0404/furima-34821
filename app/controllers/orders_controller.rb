@@ -5,13 +5,7 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
     @order = Order.new
     if current_user == @item.user
-      #redirect_to root_path
       redirect_to root_path
-    end
-
-    if @item.user_buy_address.present?
-      redirect_to item_path
-    
     end
   end
 
