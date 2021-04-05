@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :user_buy_addresses
       
   with_options presence: true do
-    validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{7,}/, message: 'is invalid. Input half-width characters.' }
+    validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/, message: 'is invalid. Input half-width characters.' }
     validates :nickname
     validates :birthday
     with_options format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'is invalid. Input full-width characters.' } do
