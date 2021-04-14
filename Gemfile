@@ -62,3 +62,5 @@ gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 gem 'payjp'
 gem "aws-sdk-s3", require: false
+gem 'devise-i18n-views'
+gem 'ransack'

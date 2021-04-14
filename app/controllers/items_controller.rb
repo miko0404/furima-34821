@@ -22,7 +22,11 @@ class ItemsController < ApplicationController
   end
 
   def show
-   
+    @comment = Comment.new
+    @comments = @item.comments.includes(:user)
+    if @comment.save
+         redirect_to item_path
+    end
   end
 
   def edit
@@ -48,7 +52,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:image, :item_name, :item_explanation, :category_id, :item_status_id, :postage_payer_id, :address_id, :days_shipping_id, :exhibition_price).merge(user_id: current_user.id)
+    params.require(:item).permit({images: []}, :item_name, :item_explanation, :category_id, :item_status_id, :postage_payer_id, :address_id, :days_shipping_id, :exhibition_price).merge(user_id: current_user.id)
   end
 
   def set_item
