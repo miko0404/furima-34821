@@ -89,8 +89,6 @@
       </p>
       <%= f.submit "コメントする", class: "comment-btn"%>
        <% end %>     
-      </button>
-    </form>
         <% @comments.each do |c| %>
           <p><%= c.user.nickname %></p>
           <%= c.text %>   
