@@ -13,9 +13,7 @@ consumer.subscriptions.create("CommentChannel", {
     const html = `<p>${data.content.text}</p>`;
     const comments = document.getElementById('comments');
     const newComment = document.getElementById('comment_text');
-    
     comments.insertAdjacentHTML('afterbegin', html);
     newComment.value='';
-    // Called when there's incoming data on the websocket for this channel
   }
 });
