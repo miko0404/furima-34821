@@ -24,9 +24,7 @@ class ItemsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
-    if @comment.save
-         redirect_to item_path
-    end
+    
   end
 
   def edit
